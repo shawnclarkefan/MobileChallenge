@@ -16,6 +16,7 @@
 		A9115CE91A58D80000A6BA99 /* MobileChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CE81A58D80000A6BA99 /* MobileChallengeTests.m */; };
 		A9115CF51A58D80E00A6BA99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CF41A58D80E00A6BA99 /* SWRevealViewController.m */; };
 		A9115CF81A58DEFD00A6BA99 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */; };
+		A9C8F3721A5A6F7000714561 /* OngoingTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		A9115CF41A58D80E00A6BA99 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A9115CF61A58DEFD00A6BA99 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		A9C8F3701A5A6F7000714561 /* OngoingTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTournamentViewController.h; sourceTree = "<group>"; };
+		A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTournamentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				A9115CF61A58DEFD00A6BA99 /* NavigationViewController.h */,
 				A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */,
 				A9115CD61A58D7FF00A6BA99 /* Main.storyboard */,
+				A9C8F3701A5A6F7000714561 /* OngoingTournamentViewController.h */,
+				A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */,
 				A9115CD91A58D7FF00A6BA99 /* Images.xcassets */,
 				A9115CDB1A58D80000A6BA99 /* LaunchScreen.xib */,
 				A9115CCC1A58D7FF00A6BA99 /* Supporting Files */,
@@ -242,6 +247,7 @@
 				A9115CF81A58DEFD00A6BA99 /* NavigationViewController.m in Sources */,
 				A9115CCF1A58D7FF00A6BA99 /* main.m in Sources */,
 				A9115CF51A58D80E00A6BA99 /* SWRevealViewController.m in Sources */,
+				A9C8F3721A5A6F7000714561 /* OngoingTournamentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +438,7 @@
 				A9115CEE1A58D80000A6BA99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9115CEF1A58D80000A6BA99 /* Build configuration list for PBXNativeTarget "MobileChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				A9115CF11A58D80000A6BA99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

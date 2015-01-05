@@ -9,6 +9,7 @@
 #import "NavigationViewController.h"
 #import "SWRevealViewController.h"
 
+
 @interface NavigationViewController ()
 
 @end
@@ -26,7 +27,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    menu = @[@"Tennis", @"Rugby", @"Basketball", @"Football", @"Badmiton"];
+    menu = @[@"Ongoing Tournaments", @"Tournament Calender", @"Rankings", @"Photos"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,7 +113,11 @@
             
         };
     }
+}*/
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
 }
 
-*/
+
 @end
