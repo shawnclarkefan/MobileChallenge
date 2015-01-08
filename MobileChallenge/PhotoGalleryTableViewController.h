@@ -1,5 +1,5 @@
 //
-//  OngoingTournamentViewController.h
+//  PhotoGalleryTableViewController.h
 //  MobileChallenge
 //
 //  Created by fan gang on 5/1/15.
@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OngoingTournamentViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface PhotoGalleryTableViewController : UITableViewController <UITabBarDelegate, UITableViewDataSource>
 {
     IBOutlet UITableView *tableData;
+
+
 }
+
 @end

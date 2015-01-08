@@ -1618,6 +1618,7 @@ const int FrontViewPositionNone = 0xff;
 
 // Load any defined front/rear controllers from the storyboard
 // This method is intended to be overrided in case the default behavior will not meet your needs
+
 - (void)loadStoryboardControllers
 {
     if ( self.storyboard && _rearViewController == nil )
@@ -1642,6 +1643,7 @@ const int FrontViewPositionNone = 0xff;
         @catch(NSException *exception) {}
     }
 }
+
 
 
 @end

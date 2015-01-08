@@ -16,6 +16,8 @@
 		A9115CE91A58D80000A6BA99 /* MobileChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CE81A58D80000A6BA99 /* MobileChallengeTests.m */; };
 		A9115CF51A58D80E00A6BA99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CF41A58D80E00A6BA99 /* SWRevealViewController.m */; };
 		A9115CF81A58DEFD00A6BA99 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */; };
+		A931BD631A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A931BD621A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m */; };
+		A941FBED1A5BC37C00E9468F /* RankingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A941FBEC1A5BC37C00E9468F /* RankingsTableViewController.m */; };
 		A9C8F3721A5A6F7000714561 /* OngoingTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,10 @@
 		A9115CF41A58D80E00A6BA99 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A9115CF61A58DEFD00A6BA99 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		A931BD611A5AD8D90037ADC9 /* PhotoGalleryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryTableViewController.h; sourceTree = "<group>"; };
+		A931BD621A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryTableViewController.m; sourceTree = "<group>"; };
+		A941FBEB1A5BC37C00E9468F /* RankingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingsTableViewController.h; sourceTree = "<group>"; };
+		A941FBEC1A5BC37C00E9468F /* RankingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingsTableViewController.m; sourceTree = "<group>"; };
 		A9C8F3701A5A6F7000714561 /* OngoingTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTournamentViewController.h; sourceTree = "<group>"; };
 		A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTournamentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,11 +103,15 @@
 				A9115CF61A58DEFD00A6BA99 /* NavigationViewController.h */,
 				A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */,
 				A9115CD61A58D7FF00A6BA99 /* Main.storyboard */,
+				A941FBEB1A5BC37C00E9468F /* RankingsTableViewController.h */,
+				A941FBEC1A5BC37C00E9468F /* RankingsTableViewController.m */,
 				A9C8F3701A5A6F7000714561 /* OngoingTournamentViewController.h */,
 				A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */,
 				A9115CD91A58D7FF00A6BA99 /* Images.xcassets */,
 				A9115CDB1A58D80000A6BA99 /* LaunchScreen.xib */,
 				A9115CCC1A58D7FF00A6BA99 /* Supporting Files */,
+				A931BD611A5AD8D90037ADC9 /* PhotoGalleryTableViewController.h */,
+				A931BD621A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m */,
 			);
 			path = MobileChallenge;
 			sourceTree = "<group>";
@@ -242,9 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A931BD631A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m in Sources */,
 				A9115CD51A58D7FF00A6BA99 /* ViewController.m in Sources */,
 				A9115CD21A58D7FF00A6BA99 /* AppDelegate.m in Sources */,
 				A9115CF81A58DEFD00A6BA99 /* NavigationViewController.m in Sources */,
+				A941FBED1A5BC37C00E9468F /* RankingsTableViewController.m in Sources */,
 				A9115CCF1A58D7FF00A6BA99 /* main.m in Sources */,
 				A9115CF51A58D80E00A6BA99 /* SWRevealViewController.m in Sources */,
 				A9C8F3721A5A6F7000714561 /* OngoingTournamentViewController.m in Sources */,
