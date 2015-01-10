@@ -44,4 +44,40 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++ (void)downloadDataFromURL:(NSURL *)url withCompletionHandler:(void (^)(NSData *))completionHandler {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+    
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+        else {
+            NSInteger HTTPStatusCode = [(NSHTTPURLResponse *)response statusCode];
+            
+            if (HTTPStatusCode != 200) {
+                NSLog(@"HTTP status code = %d", HTTPStatusCode);
+            
+            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                completionHandler(data);
+            }];
+        }
+    }];
+    
+    [task resume];
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @end

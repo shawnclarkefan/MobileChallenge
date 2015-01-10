@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface OngoingTournamentViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     IBOutlet UITableView *tableData;
+    IBOutlet UIBarButtonItem *returnButton;
 }
 @end

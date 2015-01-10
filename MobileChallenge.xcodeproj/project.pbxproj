@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90531B71A60B5D200A048E4 /* PlayerRankingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90531B61A60B5D200A048E4 /* PlayerRankingsTableViewController.m */; };
+		A90531BA1A60B68500A048E4 /* RankingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A90531B91A60B68500A048E4 /* RankingsTableViewCell.m */; };
 		A9115CCF1A58D7FF00A6BA99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CCE1A58D7FF00A6BA99 /* main.m */; };
 		A9115CD21A58D7FF00A6BA99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CD11A58D7FF00A6BA99 /* AppDelegate.m */; };
 		A9115CD51A58D7FF00A6BA99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CD41A58D7FF00A6BA99 /* ViewController.m */; };
@@ -17,8 +19,9 @@
 		A9115CF51A58D80E00A6BA99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CF41A58D80E00A6BA99 /* SWRevealViewController.m */; };
 		A9115CF81A58DEFD00A6BA99 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */; };
 		A931BD631A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A931BD621A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m */; };
-		A941FBED1A5BC37C00E9468F /* RankingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A941FBEC1A5BC37C00E9468F /* RankingsTableViewController.m */; };
+		A998102A1A5E78150029147D /* TournamentCalenderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99810291A5E78150029147D /* TournamentCalenderTableViewController.m */; };
 		A9C8F3721A5A6F7000714561 /* OngoingTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */; };
+		A9D8AE301A5EBC35009FA312 /* CalenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D8AE2F1A5EBC35009FA312 /* CalenderTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A90531B51A60B5D200A048E4 /* PlayerRankingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerRankingsTableViewController.h; path = ../PlayerRankingsTableViewController.h; sourceTree = "<group>"; };
+		A90531B61A60B5D200A048E4 /* PlayerRankingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerRankingsTableViewController.m; path = ../PlayerRankingsTableViewController.m; sourceTree = "<group>"; };
+		A90531B81A60B68500A048E4 /* RankingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingsTableViewCell.h; sourceTree = "<group>"; };
+		A90531B91A60B68500A048E4 /* RankingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingsTableViewCell.m; sourceTree = "<group>"; };
 		A9115CC91A58D7FF00A6BA99 /* MobileChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9115CCD1A58D7FF00A6BA99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9115CCE1A58D7FF00A6BA99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,10 +58,12 @@
 		A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		A931BD611A5AD8D90037ADC9 /* PhotoGalleryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryTableViewController.h; sourceTree = "<group>"; };
 		A931BD621A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryTableViewController.m; sourceTree = "<group>"; };
-		A941FBEB1A5BC37C00E9468F /* RankingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingsTableViewController.h; sourceTree = "<group>"; };
-		A941FBEC1A5BC37C00E9468F /* RankingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingsTableViewController.m; sourceTree = "<group>"; };
+		A99810281A5E78150029147D /* TournamentCalenderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TournamentCalenderTableViewController.h; path = ../TournamentCalenderTableViewController.h; sourceTree = "<group>"; };
+		A99810291A5E78150029147D /* TournamentCalenderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TournamentCalenderTableViewController.m; path = ../TournamentCalenderTableViewController.m; sourceTree = "<group>"; };
 		A9C8F3701A5A6F7000714561 /* OngoingTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTournamentViewController.h; sourceTree = "<group>"; };
 		A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTournamentViewController.m; sourceTree = "<group>"; };
+		A9D8AE2E1A5EBC35009FA312 /* CalenderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalenderTableViewCell.h; sourceTree = "<group>"; };
+		A9D8AE2F1A5EBC35009FA312 /* CalenderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalenderTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +105,14 @@
 		A9115CCB1A58D7FF00A6BA99 /* MobileChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				A90531B51A60B5D200A048E4 /* PlayerRankingsTableViewController.h */,
+				A90531B61A60B5D200A048E4 /* PlayerRankingsTableViewController.m */,
+				A90531B81A60B68500A048E4 /* RankingsTableViewCell.h */,
+				A90531B91A60B68500A048E4 /* RankingsTableViewCell.m */,
+				A9D8AE2E1A5EBC35009FA312 /* CalenderTableViewCell.h */,
+				A9D8AE2F1A5EBC35009FA312 /* CalenderTableViewCell.m */,
+				A99810291A5E78150029147D /* TournamentCalenderTableViewController.m */,
+				A99810281A5E78150029147D /* TournamentCalenderTableViewController.h */,
 				A9115CD01A58D7FF00A6BA99 /* AppDelegate.h */,
 				A9115CD11A58D7FF00A6BA99 /* AppDelegate.m */,
 				A9115CD31A58D7FF00A6BA99 /* ViewController.h */,
@@ -103,8 +120,6 @@
 				A9115CF61A58DEFD00A6BA99 /* NavigationViewController.h */,
 				A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */,
 				A9115CD61A58D7FF00A6BA99 /* Main.storyboard */,
-				A941FBEB1A5BC37C00E9468F /* RankingsTableViewController.h */,
-				A941FBEC1A5BC37C00E9468F /* RankingsTableViewController.m */,
 				A9C8F3701A5A6F7000714561 /* OngoingTournamentViewController.h */,
 				A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */,
 				A9115CD91A58D7FF00A6BA99 /* Images.xcassets */,
@@ -252,12 +267,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A998102A1A5E78150029147D /* TournamentCalenderTableViewController.m in Sources */,
 				A931BD631A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m in Sources */,
+				A90531BA1A60B68500A048E4 /* RankingsTableViewCell.m in Sources */,
 				A9115CD51A58D7FF00A6BA99 /* ViewController.m in Sources */,
 				A9115CD21A58D7FF00A6BA99 /* AppDelegate.m in Sources */,
 				A9115CF81A58DEFD00A6BA99 /* NavigationViewController.m in Sources */,
-				A941FBED1A5BC37C00E9468F /* RankingsTableViewController.m in Sources */,
+				A90531B71A60B5D200A048E4 /* PlayerRankingsTableViewController.m in Sources */,
 				A9115CCF1A58D7FF00A6BA99 /* main.m in Sources */,
+				A9D8AE301A5EBC35009FA312 /* CalenderTableViewCell.m in Sources */,
 				A9115CF51A58D80E00A6BA99 /* SWRevealViewController.m in Sources */,
 				A9C8F3721A5A6F7000714561 /* OngoingTournamentViewController.m in Sources */,
 			);

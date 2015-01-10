@@ -7,6 +7,7 @@
 //
 
 #import "OngoingTournamentViewController.h"
+#import "SWRevealViewController.h"
 #define API_KEY @"xgp4nU6xA9UcBWSe0MIHcBVbAWz5v4wR"
 
 @interface OngoingTournamentViewController (){
@@ -53,6 +54,8 @@
         
         [myObject addObject:dictionary];
         
+        returnButton.target = self.revealViewController;
+        returnButton.action = @selector(revealToggle:);
         
                       
     }
