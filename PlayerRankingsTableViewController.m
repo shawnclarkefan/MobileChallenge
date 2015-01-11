@@ -8,16 +8,17 @@
 
 #import "PlayerRankingsTableViewController.h"
 #import "RankingsTableViewCell.h"
+#import "AppDelegate.h"
+#import "SWRevealViewController.h"
 
-#define kBgQueue dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 #define kPlayerRankingsURL [NSURL URLWithString:@"https://www.kimonolabs.com/api/bg6tcuuq?apikey=xgp4nU6xA9UcBWSe0MIHcBVbAWz5v4wR"]
 
 
-@interface PlayerRankingsTableViewController (){
-    NSArray *playerRankings;
+@interface PlayerRankingsTableViewController () {
+    
 }
 
-
+@property (nonatomic, strong) NSArray *playerRankings;
 
 @end
 
@@ -36,11 +37,17 @@
                                withObject:data waitUntilDone:YES];
     });
     
+    /*
+    self.rankingsHomeButton.target = self.revealViewController;
+    self.rankingsHomeButton.action = @selector(revealToggle:);
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    */
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Dispose of any resources that can be rexrcreated.
 }
 
 - (void)fetchedData:(NSData *)responseData {
@@ -50,8 +57,13 @@
                           options:kNilOptions
                           error:&error];
     
-    NSArray *playerRankings = [[json objectForKey:@"results"]objectForKey:@"collection1"];
-    NSLog(@"%@", playerRankings);
+    NSArray *myPlayerRankings = [[json objectForKey:@"results"]objectForKey:@"collection1"];
+    self.playerRankings = myPlayerRankings;
+    
+    [self.tableView reloadData];
+    
+    NSLog(@"%@", self.playerRankings);
+
 }
 
 #pragma mark - Table view data source
@@ -63,27 +75,29 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [playerRankings count];
+    return [self.playerRankings count];
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    RankingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    RankingsTableViewCell *cell = (RankingsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = (RankingsTableViewCell *)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
 
-    NSDictionary *rankings = [playerRankings objectAtIndex:indexPath.row];
+    NSDictionary *rankings = [self.playerRankings objectAtIndex: indexPath.row];
     
     NSString *rank = [rankings objectForKey:@"rank"];
     NSString *name = [rankings objectForKey:@"name"];
     NSString *points = [rankings objectForKey:@"points"];
     
-    [cell.playerRank setText:rank];
+    
+    cell.playerRank.text = rank;
     cell.playerName.text = name;
-    cell.playerPoints.text = points;
-
+    cell.playerPoints.text = [NSString stringWithFormat:@"%@", points];
 
     return cell;
 }

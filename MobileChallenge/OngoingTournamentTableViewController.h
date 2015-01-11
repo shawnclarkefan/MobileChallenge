@@ -1,5 +1,5 @@
 //
-//  PhotoGalleryTableViewController.h
+//  OngoingTournamentTableViewController.h
 //  MobileChallenge
 //
 //  Created by fan gang on 11/1/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoGalleryTableViewController : UITableViewController
+@interface OngoingTournamentTableViewController : UITableViewController
 
 @end

@@ -2,29 +2,32 @@
 //  TournamentCalenderTableViewController.m
 //  MobileChallenge
 //
-//  Created by fan gang on 8/1/15.
+//  Created by fan gang on 11/1/15.
 //  Copyright (c) 2015 Shawn Fan. All rights reserved.
 //
-#define API_KEY @"xgp4nU6xA9UcBWSe0MIHcBVbAWz5v4wR"
-#import "TournamentCalenderTableViewController.h"
 
+#import "TournamentCalenderTableViewController.h"
+#import "CalenderTableViewCell.h"
 #import "AppDelegate.h"
+
+#define kTournamentCaldenerURL [NSURL URLWithString: @"https://www.kimonolabs.com/api/bt9wfgki?apikey=xgp4nU6xA9UcBWSe0MIHcBVbAWz5v4wR"]
 
 @interface TournamentCalenderTableViewController ()
 
--(NSArray *)tournamentCalender;
+@property (nonatomic, strong) NSArray *tournamentCalender;
 
 @end
 
-@implementation TournamentCalenderTableViewController {
-    NSArray *tournamentCalender;
-}
+@implementation TournamentCalenderTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self tournamentCalender];
-    
+    dispatch_async(kBgQueue, ^{
+        NSData *calenderData = [NSData dataWithContentsOfURL:kTournamentCaldenerURL];
+        [self performSelectorOnMainThread:@selector(fetchedCalender:) withObject:calenderData
+                            waitUntilDone:YES];
+    });
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -38,52 +41,50 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSArray *)tournamentCalender {
-    NSString *urlAsString = [NSString stringWithFormat:@"https://www.kimonolabs.com/api/bt9wfgki?key=%@",API_KEY];
-    NSURL *url =[NSURL URLWithString:urlAsString];
+- (void)fetchedCalender:(NSData *)calenderResponseData {
+    NSError *error;
+    NSDictionary *json= [NSJSONSerialization
+                         JSONObjectWithData:calenderResponseData
+                         options:kNilOptions
+                         error:&error];
     
-    [AppDelegate downloadDataFromURL:url withCompletionHandler:^(NSData *data) {
-        if (data != nil) {
-            NSError *error;
-            NSMutableDictionary *returnedDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-            
-            if (error != nil) {
-                NSLog(@"%@", [error localizedDescription]);
-            }
-            else{
-                NSArray *tournamentCalender = [[returnedDict objectForKey:@"results"] objectForKey:@"collection1"];
-            
-            }
-        }
-    }];
+    NSArray *myTournamentCalender = [[json objectForKey:@"results"] objectForKey:@"collection1"];
+    self.tournamentCalender = myTournamentCalender;
     
-    return tournamentCalender;
+    [self.tableView reloadData];
+    
+    NSLog(@"%@", self.tournamentCalender);
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     // Return the number of rows in the section.
-    return [tournamentCalender count];
+    return [self.tournamentCalender count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    CalenderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"calenderCell" forIndexPath:indexPath];
+    
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-        cell.accessoryType =UITableViewCellAccessoryNone;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell = (CalenderTableViewCell *)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"calenderCell"];
     }
     
-    NSMutableDictionary *tournamentCalenderDict = [tournamentCalender objectAtIndex:indexPath.row];
+    NSDictionary *calender = [self.tournamentCalender objectAtIndex:indexPath.row];
+    
+    NSString *what = [calender objectForKey:@"tournament"];
+    NSString *when = [calender objectForKey:@"duration"];
+    NSString *where = [calender objectForKey:@"venue"];
+    
+    cell.whatTournament.text = what;
+    cell.whenTournament.text= when;
+    cell.whereTournament.text = where;
     
     
     return cell;

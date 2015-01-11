@@ -18,10 +18,10 @@
 		A9115CE91A58D80000A6BA99 /* MobileChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CE81A58D80000A6BA99 /* MobileChallengeTests.m */; };
 		A9115CF51A58D80E00A6BA99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CF41A58D80E00A6BA99 /* SWRevealViewController.m */; };
 		A9115CF81A58DEFD00A6BA99 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */; };
-		A931BD631A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A931BD621A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m */; };
-		A998102A1A5E78150029147D /* TournamentCalenderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99810291A5E78150029147D /* TournamentCalenderTableViewController.m */; };
-		A9C8F3721A5A6F7000714561 /* OngoingTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */; };
-		A9D8AE301A5EBC35009FA312 /* CalenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D8AE2F1A5EBC35009FA312 /* CalenderTableViewCell.m */; };
+		A94B5C841A6214EF00113DA1 /* PhotoGalleryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94B5C831A6214EF00113DA1 /* PhotoGalleryTableViewController.m */; };
+		A96F489F1A618800000A8312 /* TournamentCalenderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96F489E1A618800000A8312 /* TournamentCalenderTableViewController.m */; };
+		A97BCD211A61FC99004A33AE /* CalenderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A97BCD201A61FC99004A33AE /* CalenderTableViewCell.m */; };
+		A97BCD241A620338004A33AE /* OngoingTournamentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A97BCD231A620338004A33AE /* OngoingTournamentTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,14 +56,14 @@
 		A9115CF41A58D80E00A6BA99 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A9115CF61A58DEFD00A6BA99 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
-		A931BD611A5AD8D90037ADC9 /* PhotoGalleryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryTableViewController.h; sourceTree = "<group>"; };
-		A931BD621A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryTableViewController.m; sourceTree = "<group>"; };
-		A99810281A5E78150029147D /* TournamentCalenderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TournamentCalenderTableViewController.h; path = ../TournamentCalenderTableViewController.h; sourceTree = "<group>"; };
-		A99810291A5E78150029147D /* TournamentCalenderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TournamentCalenderTableViewController.m; path = ../TournamentCalenderTableViewController.m; sourceTree = "<group>"; };
-		A9C8F3701A5A6F7000714561 /* OngoingTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTournamentViewController.h; sourceTree = "<group>"; };
-		A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTournamentViewController.m; sourceTree = "<group>"; };
-		A9D8AE2E1A5EBC35009FA312 /* CalenderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalenderTableViewCell.h; sourceTree = "<group>"; };
-		A9D8AE2F1A5EBC35009FA312 /* CalenderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalenderTableViewCell.m; sourceTree = "<group>"; };
+		A94B5C821A6214EF00113DA1 /* PhotoGalleryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryTableViewController.h; sourceTree = "<group>"; };
+		A94B5C831A6214EF00113DA1 /* PhotoGalleryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryTableViewController.m; sourceTree = "<group>"; };
+		A96F489D1A618800000A8312 /* TournamentCalenderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TournamentCalenderTableViewController.h; sourceTree = "<group>"; };
+		A96F489E1A618800000A8312 /* TournamentCalenderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TournamentCalenderTableViewController.m; sourceTree = "<group>"; };
+		A97BCD1F1A61FC99004A33AE /* CalenderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalenderTableViewCell.h; path = MobileChallengeTests/CalenderTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		A97BCD201A61FC99004A33AE /* CalenderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalenderTableViewCell.m; path = MobileChallengeTests/CalenderTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		A97BCD221A620338004A33AE /* OngoingTournamentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTournamentTableViewController.h; sourceTree = "<group>"; };
+		A97BCD231A620338004A33AE /* OngoingTournamentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTournamentTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +105,12 @@
 		A9115CCB1A58D7FF00A6BA99 /* MobileChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				A97BCD1F1A61FC99004A33AE /* CalenderTableViewCell.h */,
+				A97BCD201A61FC99004A33AE /* CalenderTableViewCell.m */,
 				A90531B51A60B5D200A048E4 /* PlayerRankingsTableViewController.h */,
 				A90531B61A60B5D200A048E4 /* PlayerRankingsTableViewController.m */,
 				A90531B81A60B68500A048E4 /* RankingsTableViewCell.h */,
 				A90531B91A60B68500A048E4 /* RankingsTableViewCell.m */,
-				A9D8AE2E1A5EBC35009FA312 /* CalenderTableViewCell.h */,
-				A9D8AE2F1A5EBC35009FA312 /* CalenderTableViewCell.m */,
-				A99810291A5E78150029147D /* TournamentCalenderTableViewController.m */,
-				A99810281A5E78150029147D /* TournamentCalenderTableViewController.h */,
 				A9115CD01A58D7FF00A6BA99 /* AppDelegate.h */,
 				A9115CD11A58D7FF00A6BA99 /* AppDelegate.m */,
 				A9115CD31A58D7FF00A6BA99 /* ViewController.h */,
@@ -120,13 +118,15 @@
 				A9115CF61A58DEFD00A6BA99 /* NavigationViewController.h */,
 				A9115CF71A58DEFD00A6BA99 /* NavigationViewController.m */,
 				A9115CD61A58D7FF00A6BA99 /* Main.storyboard */,
-				A9C8F3701A5A6F7000714561 /* OngoingTournamentViewController.h */,
-				A9C8F3711A5A6F7000714561 /* OngoingTournamentViewController.m */,
+				A96F489D1A618800000A8312 /* TournamentCalenderTableViewController.h */,
+				A96F489E1A618800000A8312 /* TournamentCalenderTableViewController.m */,
+				A97BCD221A620338004A33AE /* OngoingTournamentTableViewController.h */,
+				A97BCD231A620338004A33AE /* OngoingTournamentTableViewController.m */,
+				A94B5C821A6214EF00113DA1 /* PhotoGalleryTableViewController.h */,
+				A94B5C831A6214EF00113DA1 /* PhotoGalleryTableViewController.m */,
 				A9115CD91A58D7FF00A6BA99 /* Images.xcassets */,
 				A9115CDB1A58D80000A6BA99 /* LaunchScreen.xib */,
 				A9115CCC1A58D7FF00A6BA99 /* Supporting Files */,
-				A931BD611A5AD8D90037ADC9 /* PhotoGalleryTableViewController.h */,
-				A931BD621A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m */,
 			);
 			path = MobileChallenge;
 			sourceTree = "<group>";
@@ -267,17 +267,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A998102A1A5E78150029147D /* TournamentCalenderTableViewController.m in Sources */,
-				A931BD631A5AD8D90037ADC9 /* PhotoGalleryTableViewController.m in Sources */,
 				A90531BA1A60B68500A048E4 /* RankingsTableViewCell.m in Sources */,
 				A9115CD51A58D7FF00A6BA99 /* ViewController.m in Sources */,
 				A9115CD21A58D7FF00A6BA99 /* AppDelegate.m in Sources */,
 				A9115CF81A58DEFD00A6BA99 /* NavigationViewController.m in Sources */,
+				A96F489F1A618800000A8312 /* TournamentCalenderTableViewController.m in Sources */,
+				A94B5C841A6214EF00113DA1 /* PhotoGalleryTableViewController.m in Sources */,
 				A90531B71A60B5D200A048E4 /* PlayerRankingsTableViewController.m in Sources */,
 				A9115CCF1A58D7FF00A6BA99 /* main.m in Sources */,
-				A9D8AE301A5EBC35009FA312 /* CalenderTableViewCell.m in Sources */,
+				A97BCD241A620338004A33AE /* OngoingTournamentTableViewController.m in Sources */,
 				A9115CF51A58D80E00A6BA99 /* SWRevealViewController.m in Sources */,
-				A9C8F3721A5A6F7000714561 /* OngoingTournamentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9115CE91A58D80000A6BA99 /* MobileChallengeTests.m in Sources */,
+				A97BCD211A61FC99004A33AE /* CalenderTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,52 +1,61 @@
 //
-//  PhotoGalleryTableViewController.m
+//  OngoingTournamentTableViewController.m
 //  MobileChallenge
 //
 //  Created by fan gang on 11/1/15.
 //  Copyright (c) 2015 Shawn Fan. All rights reserved.
 //
 
-#import "PhotoGalleryTableViewController.h"
+#import "OngoingTournamentTableViewController.h"
 #import "AppDelegate.h"
 
-#define kPhotoGalleryURL [NSURL URLWithString:@"https://www.kimonolabs.com/api/2v35aqn0?apikey=xgp4nU6xA9UcBWSe0MIHcBVbAWz5v4wR"]
+#define kOngoingTournamentURL [NSURL URLWithString:@"https://www.kimonolabs.com/api/d4leq2cs?apikey=xgp4nU6xA9UcBWSe0MIHcBVbAWz5v4wR"]
 
 
-@interface PhotoGalleryTableViewController ()
+@interface OngoingTournamentTableViewController ()
 
-@property (nonatomic, strong) NSArray *photoGallery;
+@property (nonatomic, strong) NSArray *ongoingTournament;
 
 @end
 
-@implementation PhotoGalleryTableViewController
+@implementation OngoingTournamentTableViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     dispatch_async(kBgQueue, ^{
-        NSData *data = [NSData dataWithContentsOfURL:kPhotoGalleryURL];
-        [self performSelectorOnMainThread:@selector(fetchedGalleryData:) withObject:data waitUntilDone:YES];
+        NSData *data = [NSData dataWithContentsOfURL:kOngoingTournamentURL];
+        [self performSelectorOnMainThread:@selector(fetchedTournamentData:)
+                               withObject:data waitUntilDone:YES];
     });
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-
 }
 
--(void)fetchedGalleryData:(NSData *)galleryResponseData {
+- (void)fetchedTournamentData:(NSData *)tournamentResponseData {
     NSError *error;
     NSDictionary *json = [NSJSONSerialization
-                          JSONObjectWithData:galleryResponseData
+                          JSONObjectWithData:tournamentResponseData
                           options:kNilOptions
                           error:&error];
-    NSArray *myPhotoGallery = [[json objectForKey:@"results"]objectForKey:@"collection1"];
-    myPhotoGallery = self.photoGallery;
-    NSLog(@"%@", self.photoGallery);
+    
+    NSArray *myOngoingTournament = [[json objectForKey:@"results"] objectForKey:@"collection1"];
+    
+    self.ongoingTournament = myOngoingTournament;
+    
+    [self.tableView reloadData];
+    
+    NSLog(@"%@", self.ongoingTournament);
 }
-
 
 #pragma mark - Table view data source
 
@@ -57,32 +66,28 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.photoGallery count];
+    return [self.ongoingTournament count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"galleryCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tournamentCell" forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"galleryCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"tournamentCell"];
     }
     
-    NSDictionary *galleries = [self.photoGallery objectAtIndex:indexPath.row];
+    NSDictionary *tournaments = [self.ongoingTournament objectAtIndex:indexPath.row];
     
-    NSString *description = [[galleries objectForKey:@"description"] objectForKey:@"text"];
-    NSMutableString *images = [[galleries objectForKey:@"photo"] objectForKey:@"src"];
+    NSString *title = [[tournaments objectForKey:@"Title"] objectForKey:@"text"];
+    NSString *venue = [tournaments objectForKey:@"Venue"];
     
-    NSURL *imageURL = [NSURL URLWithString:images];
-    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    UIImage *img = [[UIImage alloc] initWithData:imageData];
-    
-    cell.textLabel.text = description;
-    cell.imageView.image = img;
-    
+    cell.textLabel.text = title;
+    cell.detailTextLabel.text = venue;
     
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.

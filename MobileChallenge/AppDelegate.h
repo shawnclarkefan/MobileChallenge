@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 Shawn Fan. All rights reserved.
 //
 
+
+#define kBgQueue dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

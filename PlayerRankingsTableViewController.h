@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlayerRankingsTableViewController : UITableViewController
+@interface PlayerRankingsTableViewController : UITableViewController {
+   
+}
 
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *rankingsHomeButton;
 
 @end
